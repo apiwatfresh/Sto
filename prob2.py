@@ -11,7 +11,7 @@ b = ((112*(a))%111)+2
 
 #x2 = x1+1 = ((112*x1)%111)+2
 c = ((112*(b))%111)+2
-
+print("x0={},x1={},x2={}".format(a,b,c))
 # 1. รหัสและพารามิเตอร์ที่เกี่ยวข้องด้วยโปรแกรมเซจ
 
 # 1.1 พารามิเตอร์ที่เกี่ยวข้อง
@@ -36,6 +36,7 @@ plt.show()
 
 Mn = np.mean(X)
 pn = Mn / N
+print("Xmin = {}, Xmax = {}".format(minX,maxX))
 
 # 1.3 รหัสสำหรับ candidate PMF
 # PMF of Binomial Distributions
