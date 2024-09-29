@@ -26,8 +26,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 X = np.random.binomial(N, p, n)  # Random sequence of Binomial RV.
+print("X = {}".format(X))
 minX = X.min()
 maxX = X.max()
+print("Xmin = {}, Xmax = {}".format(minX,maxX))
 e = np.arange(minX - 0.5, maxX + 1)
 np.histogram(X, bins=e)
 plt.hist(X, bins=e)
@@ -36,7 +38,8 @@ plt.show()
 
 Mn = np.mean(X)
 pn = Mn / N
-print("Xmin = {}, Xmax = {}".format(minX,maxX))
+print("e = {}".format(e))
+print("Mn = {},Pn = {}".format(Mn,pn))
 
 # 1.3 รหัสสำหรับ candidate PMF
 # PMF of Binomial Distributions
@@ -44,7 +47,9 @@ from scipy import stats
 from scipy.stats import binom
 
 k = np.arange(0, N + 1)
+print("k = {}".format(k))
 PMF = binom.pmf(k, N, pn)
+print("PMF = {}".format(PMF))
 fig, ax = plt.subplots(1, 1)
 ax.plot(k, PMF, 'ro', ms=12, mec='r')
 ax.vlines(k, 0, PMF, colors='r', lw=4)
