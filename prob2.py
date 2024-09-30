@@ -31,6 +31,7 @@ minX = X.min()
 maxX = X.max()
 print("Xmin = {}, Xmax = {}".format(minX,maxX))
 e = np.arange(minX - 0.5, maxX + 1)
+print("E = {}".format(e))
 np.histogram(X, bins=e)
 plt.hist(X, bins=e)
 plt.title("Histogram with bins = e")
@@ -38,7 +39,6 @@ plt.show()
 
 Mn = np.mean(X)
 pn = Mn / N
-print("e = {}".format(e))
 print("Mn = {},Pn = {}".format(Mn,pn))
 
 # 1.3 รหัสสำหรับ candidate PMF
